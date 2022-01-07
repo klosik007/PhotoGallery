@@ -5,6 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/profile_bio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BIO"
+        android:visibility="gone"/>
+
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabHolder"
         android:layout_width="match_parent"
@@ -13,34 +21,37 @@
         app:tabMode="scrollable">
 
         <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Bio"
-            />
-
-        <com.google.android.material.tabs.TabItem
+            android:tag="PROFILE_TAB_PHOTOS"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Photos"
             />
 
         <com.google.android.material.tabs.TabItem
+            android:tag="PROFILE_TAB_FOLLOWERS"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Followers"
             />
 
         <com.google.android.material.tabs.TabItem
+            android:tag="PROFILE_TAB_FOLLOWING"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Following"
             />
 
         <com.google.android.material.tabs.TabItem
+            android:tag="PROFILE_TAB_MOREINFO"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="More Info"
             />
 
     </com.google.android.material.tabs.TabLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/profile_multimedia_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 </LinearLayout>
