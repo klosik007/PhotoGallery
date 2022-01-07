@@ -3,23 +3,23 @@
 
     <item
         android:id="@+id/addMultimedia"
-        android:icon="@drawable/ic_baseline_add_box_24"
-        android:title="@string/addMultimedia"
-        android:contentDescription="@string/addMultimedia_description"
+        android:icon="@drawable/menu_add_multimedia"
+        android:title="@string/add_multimedia"
+        android:contentDescription="@string/add_multimedia_description"
         app:showAsAction="ifRoom" />
 
     <item
         android:id="@+id/likes"
-        android:icon="@drawable/ic_baseline_local_fire_department_24"
+        android:icon="@drawable/menu_likes"
         android:title="@string/likes"
         android:contentDescription="@string/likes_description"
         app:showAsAction="ifRoom" />
 
     <item
         android:id="@+id/messages"
-        android:icon="@drawable/ic_baseline_send_24"
-        android:title="@string/send"
-        android:contentDescription="@string/send_description"
+        android:icon="@drawable/menu_messages"
+        android:title="@string/messages"
+        android:contentDescription="@string/messages_description"
         app:showAsAction="ifRoom" />
 
 </menu>

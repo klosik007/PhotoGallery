@@ -1,3 +1,9 @@
 <resources>
-    <string name="app_name">PhotoGallery</string>
+    <string name="app_name">Photo Gallery</string>
+    <string name="add_multimedia">Add Multimedia</string>
+    <string name="add_multimedia_description">Add multimedia on your profile</string>
+    <string name="likes">Likes</string>
+    <string name="likes_description">Show likes and user activities</string>
+    <string name="messages">Messages</string>
+    <string name="messages_description">Show messages received and sent to your friends</string>
 </resources>
