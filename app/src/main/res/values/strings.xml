@@ -6,4 +6,9 @@
     <string name="likes_description">Show likes and user activities</string>
     <string name="messages">Messages</string>
     <string name="messages_description">Show messages received and sent to your friends</string>
+    <string name="profile_textview_bio">BIO</string>
+    <string name="profile_tab_photos">PHOTOS</string>
+    <string name="profile_tab_followers">FOLLOWERS</string>
+    <string name="profile_tab_following">FOLLOWING</string>
+    <string name="profile_tab_more_info">MORE INFO</string>
 </resources>

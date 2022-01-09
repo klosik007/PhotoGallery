@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:layout_margin="10dp">
 
     <TextView
         android:id="@+id/profile_bio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="BIO"
+        android:text="@string/profile_textview_bio"
         android:visibility="gone"/>
 
     <com.google.android.material.tabs.TabLayout
@@ -24,28 +25,28 @@
             android:tag="PROFILE_TAB_PHOTOS"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Photos"
+            android:text="@string/profile_tab_photos"
             />
 
         <com.google.android.material.tabs.TabItem
             android:tag="PROFILE_TAB_FOLLOWERS"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Followers"
+            android:text="@string/profile_tab_followers"
             />
 
         <com.google.android.material.tabs.TabItem
             android:tag="PROFILE_TAB_FOLLOWING"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Following"
+            android:text="@string/profile_tab_following"
             />
 
         <com.google.android.material.tabs.TabItem
             android:tag="PROFILE_TAB_MOREINFO"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="More Info"
+            android:text="@string/profile_tab_more_info"
             />
 
     </com.google.android.material.tabs.TabLayout>
@@ -53,5 +54,6 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/profile_multimedia_recycler_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"/>
 </LinearLayout>
