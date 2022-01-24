@@ -1,4 +1,4 @@
-package com.example.photogallery
+package com.pk.photogallery
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

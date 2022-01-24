@@ -1,4 +1,5 @@
-package com.example.photogallery
+package com.pk.photogallery
+
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.google.android.material.tabs.TabLayout
@@ -11,8 +12,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        tab = findViewById(R.id.tabHolder)
-
+//        tab = findViewById(R.id.tabHolder)
         supportFragmentManager
             .beginTransaction()
             //.add(R.id.fragment_container, FreakyLauncherFragment())
