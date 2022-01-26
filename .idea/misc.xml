@@ -7,7 +7,10 @@
         <entry key="..\:/Users/pklos/AndroidStudioProjects/PhotoGallery/app/src/main/res/drawable/ic_baseline_menu_24.xml" value="0.37864583333333335" />
         <entry key="..\:/Users/pklos/AndroidStudioProjects/PhotoGallery/app/src/main/res/drawable/ic_baseline_send_24.xml" value="0.37864583333333335" />
         <entry key="..\:/Users/pklos/AndroidStudioProjects/PhotoGallery/app/src/main/res/drawable/ic_launcher_background.xml" value="0.37864583333333335" />
-        <entry key="..\:/Users/pklos/AndroidStudioProjects/PhotoGallery/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Users/pklos/AndroidStudioProjects/PhotoGallery/app/src/main/res/drawable/menu_bottom_add.xml" value="0.37864583333333335" />
+        <entry key="..\:/Users/pklos/AndroidStudioProjects/PhotoGallery/app/src/main/res/drawable/menu_bottom_home.xml" value="0.37864583333333335" />
+        <entry key="..\:/Users/pklos/AndroidStudioProjects/PhotoGallery/app/src/main/res/drawable/menu_bottom_search.xml" value="0.37864583333333335" />
+        <entry key="..\:/Users/pklos/AndroidStudioProjects/PhotoGallery/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Users/pklos/AndroidStudioProjects/PhotoGallery/app/src/main/res/layout/activity_main_recycler_view.xml" value="0.20260416666666667" />
         <entry key="..\:/Users/pklos/AndroidStudioProjects/PhotoGallery/app/src/main/res/layout/main_fragment.xml" value="0.35688405797101447" />
         <entry key="..\:/Users/pklos/AndroidStudioProjects/PhotoGallery/app/src/main/res/layout/profile_fragment.xml" value="0.3432971014492754" />

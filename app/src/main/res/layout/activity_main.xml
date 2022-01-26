@@ -36,13 +36,29 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        style="@style/Widget.MaterialComponents.BottomAppBar.Colored"
-        app:menu="@menu/app_bar_bottom" />
+        android:layoutDirection="rtl"
+        app:fabAlignmentMode="center"
+        app:fabAnimationMode="scale"
+        app:hideOnScroll="true"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/purple_200"
+            app:menu="@menu/app_bar_bottom"
+            app:itemTextColor="@android:color/transparent"/>
+
+    </com.google.android.material.bottomappbar.BottomAppBar>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:srcCompat="@drawable/menu_bottom_add"
             app:layout_anchor="@id/bottomAppBar"
-            />
+            android:contentDescription="@string/menu_bottom_add_content_description" />
+
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
