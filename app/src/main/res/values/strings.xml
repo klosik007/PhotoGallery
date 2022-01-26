@@ -11,4 +11,14 @@
     <string name="profile_tab_followers">FOLLOWERS</string>
     <string name="profile_tab_following">FOLLOWING</string>
     <string name="profile_tab_more_info">MORE INFO</string>
+    <string name="menu_bottom_home">Home</string>
+    <string name="menu_bottom_home_description">Go to home page</string>
+    <string name="menu_bottom_search">Search</string>
+    <string name="menu_bottom_search_description">Search content</string>
+    <string name="menu_bottom_profile">Profile</string>
+    <string name="menu_bottom_profile_description">Show profile</string>
+    <string name="menu_bottom_add_content_description">Add photo</string>
+    <string name="menu_bottom_hamburger">More options</string>
+    <string name="menu_bottom_hamburger_description">Show more options</string>
+
 </resources>
