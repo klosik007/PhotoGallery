@@ -2,13 +2,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/addMultimedia"
-        android:icon="@drawable/menu_add_multimedia"
-        android:title="@string/add_multimedia"
-        android:contentDescription="@string/add_multimedia_description"
-        app:showAsAction="ifRoom" />
-
-    <item
         android:id="@+id/likes"
         android:icon="@drawable/menu_likes"
         android:title="@string/likes"
