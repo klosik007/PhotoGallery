@@ -8,7 +8,8 @@
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_gravity="top">
 
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/topAppBar"
@@ -21,22 +22,17 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/profile_multimedia_recycler_view"
+    <FrameLayout
+        android:id="@+id/view_pager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingTop="60dp"
-        android:paddingStart="16dp"
-        android:paddingEnd="16dp"
-        android:paddingBottom="60dp"
-        />
+        android:layout_marginTop="?attr/actionBarSize" />
 
     <com.google.android.material.bottomappbar.BottomAppBar
         android:id="@+id/bottomAppBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        android:layoutDirection="rtl"
         app:fabAlignmentMode="center"
         app:fabAnimationMode="scale"
         app:hideOnScroll="true"
@@ -49,8 +45,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/purple_200"
-            app:menu="@menu/app_bar_bottom"
-            app:itemTextColor="@android:color/transparent"/>
+            app:menu="@menu/app_bar_bottom" />
 
     </com.google.android.material.bottomappbar.BottomAppBar>
 

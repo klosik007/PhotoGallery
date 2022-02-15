@@ -6,21 +6,21 @@
         android:icon="@drawable/menu_bottom_home"
         android:title="@string/menu_bottom_home"
         android:contentDescription="@string/menu_bottom_home_description"
-        android:orderInCategory="5"
-        app:showAsAction="always" />
+        android:orderInCategory="0"
+        app:showAsAction="ifRoom" />
 
     <item
         android:id="@+id/searchBtn"
         android:icon="@drawable/menu_bottom_search"
         android:title="@string/menu_bottom_search"
         android:contentDescription="@string/menu_bottom_search_description"
-        android:orderInCategory="4"
-        app:showAsAction="always" />
+        android:orderInCategory="1"
+        app:showAsAction="ifRoom" />
 
     <item
         android:title="EMPTY"
-        android:orderInCategory="3"
-        app:showAsAction="always"/>
+        android:orderInCategory="2"
+        app:showAsAction="ifRoom"/>
 
 
     <item
@@ -28,15 +28,15 @@
         android:icon="@drawable/menu_bottom_profile"
         android:title="@string/menu_bottom_profile"
         android:contentDescription="@string/menu_bottom_profile_description"
-        android:orderInCategory="2"
-        app:showAsAction="always" />
+        android:orderInCategory="3"
+        app:showAsAction="ifRoom" />
 
     <item
         android:id="@+id/hamburgerBtn"
         android:icon="@drawable/menu_bottom_hamburger"
         android:title="@string/menu_bottom_hamburger"
         android:contentDescription="@string/menu_bottom_hamburger_description"
-        android:orderInCategory="1"
-        app:showAsAction="always" />
+        android:orderInCategory="4"
+        app:showAsAction="ifRoom" />
 
 </menu>
