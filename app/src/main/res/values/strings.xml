@@ -20,5 +20,6 @@
     <string name="menu_bottom_add_content_description">Add photo</string>
     <string name="menu_bottom_hamburger">More options</string>
     <string name="menu_bottom_hamburger_description">Show more options</string>
+    <string name="search_hint">Search</string>
 
 </resources>
