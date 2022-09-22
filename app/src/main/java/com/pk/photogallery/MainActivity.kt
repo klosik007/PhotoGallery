@@ -18,6 +18,7 @@ import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationBarView
 import com.google.android.material.navigation.NavigationView
+import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.tabs.TabLayout
 import com.pk.photogallery.databinding.ActivityMainBinding
 import com.pk.photogallery.ui.Home
@@ -25,11 +26,7 @@ import com.pk.photogallery.ui.MoreOptions
 import com.pk.photogallery.ui.Profile
 import com.pk.photogallery.ui.Search
 
-class MainActivity : AppCompatActivity() {
-
-    private lateinit var binding: ActivityMainBinding
-    private lateinit var navigationBottom: BottomNavigationView
-
+class MainActivity : AppCompatActivity(), ActivityCompat.OnRequestPermissionsResultCallback {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -39,7 +36,6 @@ class MainActivity : AppCompatActivity() {
         navigationBottom.setOnItemSelectedListener(bottomNavListener)
 
         startSupportFragmentManager()
-        //requirePermissions()
     }
 
     override fun onRequestPermissionsResult(
@@ -48,8 +44,48 @@ class MainActivity : AppCompatActivity() {
         grantResults: IntArray
     ) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
-        // TODO: make it useful
-        // https://developer.android.com/training/permissions/requesting
+        when (requestCode) {
+            PermissionRequest.READ_EXTERNAL_STORAGE -> {
+
+            }
+
+            PermissionRequest.ACCESS_FINE_LOCATION -> {
+
+            }
+
+            PermissionRequest.CAMERA -> {
+                if (grantResults.size == 1 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    Snackbar.make(binding.root, R.string.camera_permission_granted, Snackbar.LENGTH_SHORT).show()
+                    startCamera()
+                } else {
+                    Snackbar.make(binding.root, R.string.camera_permission_denied, Snackbar.LENGTH_LONG).show()
+                }
+            }
+        }
+    }
+
+    fun showCameraPreview() {
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) ==
+            PackageManager.PERMISSION_GRANTED)
+        {
+            startCamera()
+        }
+        else
+            requestCameraPermission()
+    }
+
+    private fun requestCameraPermission() {
+        if (shouldShowRequestPermissionRationale(Manifest.permission.CAMERA)) {
+            Snackbar.make(binding.root, R.string.camera_access_required, Snackbar.LENGTH_LONG).show()
+            ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.CAMERA), PermissionRequest.CAMERA)
+        } else {
+            Snackbar.make(binding.root, R.string.camera_no_permmission, Snackbar.LENGTH_LONG).show()
+            ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.CAMERA), PermissionRequest.CAMERA)
+        }
+    }
+
+    private fun startCamera() {
+//        val intent  = Intent(this, Camera)
     }
 
     private fun startSupportFragmentManager(){
@@ -67,6 +103,7 @@ class MainActivity : AppCompatActivity() {
             R.id.searchBtn -> fragment = Search()
             R.id.profileBtn -> fragment = Profile()
             R.id.hamburgerBtn -> fragment = MoreOptions()
+
         }
 
         if (fragment != null) {
@@ -76,52 +113,13 @@ class MainActivity : AppCompatActivity() {
         true
     }
 
-    private fun requirePermissions(): Boolean {
-        val permissions = mutableListOf<String>()
-
-        when (PackageManager.PERMISSION_GRANTED) {
-            ContextCompat.checkSelfPermission(
-                this,
-                Manifest.permission.READ_EXTERNAL_STORAGE
-            ) -> {
-                permissions.add(Manifest.permission.READ_EXTERNAL_STORAGE)
-                if (ActivityCompat.shouldShowRequestPermissionRationale(
-                    this,
-                    Manifest.permission.READ_EXTERNAL_STORAGE)
-                ) {
-                    // TODO: educational UI: explain why are the permission is required
-                }
-            }
-
-            ContextCompat.checkSelfPermission(
-                this,
-                Manifest.permission.ACCESS_FINE_LOCATION
-            ) -> {
-                permissions.add(Manifest.permission.ACCESS_FINE_LOCATION)
-                if (ActivityCompat.shouldShowRequestPermissionRationale(
-                        this,
-                        Manifest.permission.ACCESS_FINE_LOCATION)
-                ) {
-                    // TODO: educational UI: explain why are the permission is required
-                }
-            }
-
-            ContextCompat.checkSelfPermission(
-                this,
-                Manifest.permission.CAMERA
-            ) -> {
-                permissions.add(Manifest.permission.CAMERA)
-                if (ActivityCompat.shouldShowRequestPermissionRationale(
-                        this,
-                        Manifest.permission.CAMERA)
-                ) {
-                    // TODO: educational UI: explain why are the permission is required
-                }
-            }
-        }
-
-        requestPermissions(permissions.toTypedArray(), 0) // TODO: requestCode 0?
-
-        return true
+    private object PermissionRequest {
+        const val READ_EXTERNAL_STORAGE = 0
+        const val WRITE_EXTERNAL_STORAGE = 1
+        const val ACCESS_FINE_LOCATION = 2
+        const val CAMERA = 3
     }
+
+    private lateinit var binding: ActivityMainBinding
+    private lateinit var navigationBottom: BottomNavigationView
 }

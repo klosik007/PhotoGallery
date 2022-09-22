@@ -49,11 +49,12 @@
 
     </com.google.android.material.bottomappbar.BottomAppBar>
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/menu_bottom_add"
-            app:layout_anchor="@id/bottomAppBar"
-            android:contentDescription="@string/menu_bottom_add_content_description" />
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addPost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/menu_bottom_add"
+        app:layout_anchor="@id/bottomAppBar"
+        android:contentDescription="@string/menu_bottom_add_content_description" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
