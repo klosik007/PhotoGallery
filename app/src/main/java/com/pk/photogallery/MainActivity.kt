@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationBarView
 import com.google.android.material.snackbar.Snackbar
+import com.pk.photogallery.consts.PermissionRequest
 import com.pk.photogallery.databinding.MainActivityBinding
 import com.pk.photogallery.ui.Home
 import com.pk.photogallery.ui.MoreOptions
@@ -101,13 +102,6 @@ class MainActivity : AppCompatActivity(), ActivityCompat.OnRequestPermissionsRes
         }
 
         true
-    }
-
-    private object PermissionRequest {
-        const val READ_EXTERNAL_STORAGE = 0
-        const val WRITE_EXTERNAL_STORAGE = 1
-        const val ACCESS_FINE_LOCATION = 2
-        const val CAMERA = 3
     }
 
     private lateinit var binding: MainActivityBinding
