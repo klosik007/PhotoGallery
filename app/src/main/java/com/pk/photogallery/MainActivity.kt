@@ -1,26 +1,16 @@
 package com.pk.photogallery
 
 import android.Manifest
-import android.app.Activity
-import android.content.Context
 import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.MenuItem
-import android.widget.AdapterView
-import android.widget.FrameLayout
-import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
-import androidx.core.view.marginTop
 import androidx.fragment.app.Fragment
-import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationBarView
-import com.google.android.material.navigation.NavigationView
 import com.google.android.material.snackbar.Snackbar
-import com.google.android.material.tabs.TabLayout
-import com.pk.photogallery.databinding.ActivityMainBinding
+import com.pk.photogallery.databinding.MainActivityBinding
 import com.pk.photogallery.ui.Home
 import com.pk.photogallery.ui.MoreOptions
 import com.pk.photogallery.ui.Profile
@@ -29,7 +19,7 @@ import com.pk.photogallery.ui.Search
 class MainActivity : AppCompatActivity(), ActivityCompat.OnRequestPermissionsResultCallback {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
+        binding = MainActivityBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         navigationBottom = binding.navigation
@@ -120,6 +110,6 @@ class MainActivity : AppCompatActivity(), ActivityCompat.OnRequestPermissionsRes
         const val CAMERA = 3
     }
 
-    private lateinit var binding: ActivityMainBinding
+    private lateinit var binding: MainActivityBinding
     private lateinit var navigationBottom: BottomNavigationView
 }
