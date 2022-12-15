@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import com.google.android.material.navigation.NavigationBarView
 import com.google.android.material.tabs.TabLayout
@@ -11,14 +12,13 @@ import com.pk.photogallery.R
 import com.pk.photogallery.databinding.ProfileFragmentBinding
 
 class Profile: Fragment() {
-    private lateinit var binding: ProfileFragmentBinding
-    private lateinit var tabLayout: TabLayout
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        binding = ProfileFragmentBinding.inflate(layoutInflater)
+
         tabLayout = binding.tabHolder
         tabLayout.addOnTabSelectedListener(tabLayoutListener)
 
@@ -30,7 +30,6 @@ class Profile: Fragment() {
     }
 
     private val tabLayoutListener = object : TabLayout.OnTabSelectedListener {
-
         override fun onTabSelected(tab: TabLayout.Tab?) {
             when(tab?.tag){
                 "PROFILE_TAB_PHOTOS" -> {
@@ -59,4 +58,7 @@ class Profile: Fragment() {
             // Handle tab unselect
         }
     }
+
+    private lateinit var binding: ProfileFragmentBinding
+    private lateinit var tabLayout: TabLayout
 }
